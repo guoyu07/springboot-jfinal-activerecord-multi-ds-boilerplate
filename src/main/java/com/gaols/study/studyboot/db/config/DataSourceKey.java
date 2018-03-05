@@ -1,4 +1,5 @@
 package com.gaols.study.studyboot.db.config;
 
-public class DataSourceKey {
+public enum DataSourceKey {
+    master, slave
 }

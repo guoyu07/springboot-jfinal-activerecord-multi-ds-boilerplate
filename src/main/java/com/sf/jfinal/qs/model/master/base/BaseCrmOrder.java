@@ -1,4 +1,4 @@
-package com.sf.jfinal.qs.model.base;
+package com.sf.jfinal.qs.model.master.base;
 
 import com.jfinal.plugin.activerecord.Model;
 import com.jfinal.plugin.activerecord.IBean;
@@ -9,27 +9,27 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings("serial")
 public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> implements IBean {
 
-	public void setId(java.lang.String id) {
+	public void setId(String id) {
 		set("id", id);
 	}
 
-	public java.lang.String getId() {
+	public String getId() {
 		return get("id");
 	}
 
-	public void setNumber(java.lang.String number) {
+	public void setNumber(String number) {
 		set("number", number);
 	}
 
-	public java.lang.String getNumber() {
+	public String getNumber() {
 		return get("number");
 	}
 
-	public void setOrderType(java.lang.String orderType) {
+	public void setOrderType(String orderType) {
 		set("order_type", orderType);
 	}
 
-	public java.lang.String getOrderType() {
+	public String getOrderType() {
 		return get("order_type");
 	}
 
@@ -49,43 +49,43 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("repair_time");
 	}
 
-	public void setCreateBy(java.lang.String createBy) {
+	public void setCreateBy(String createBy) {
 		set("create_by", createBy);
 	}
 
-	public java.lang.String getCreateBy() {
+	public String getCreateBy() {
 		return get("create_by");
 	}
 
-	public void setApplianceBrand(java.lang.String applianceBrand) {
+	public void setApplianceBrand(String applianceBrand) {
 		set("appliance_brand", applianceBrand);
 	}
 
-	public java.lang.String getApplianceBrand() {
+	public String getApplianceBrand() {
 		return get("appliance_brand");
 	}
 
-	public void setApplianceCategory(java.lang.String applianceCategory) {
+	public void setApplianceCategory(String applianceCategory) {
 		set("appliance_category", applianceCategory);
 	}
 
-	public java.lang.String getApplianceCategory() {
+	public String getApplianceCategory() {
 		return get("appliance_category");
 	}
 
-	public void setApplianceModel(java.lang.String applianceModel) {
+	public void setApplianceModel(String applianceModel) {
 		set("appliance_model", applianceModel);
 	}
 
-	public java.lang.String getApplianceModel() {
+	public String getApplianceModel() {
 		return get("appliance_model");
 	}
 
-	public void setApplianceBarcode(java.lang.String applianceBarcode) {
+	public void setApplianceBarcode(String applianceBarcode) {
 		set("appliance_barcode", applianceBarcode);
 	}
 
-	public java.lang.String getApplianceBarcode() {
+	public String getApplianceBarcode() {
 		return get("appliance_barcode");
 	}
 
@@ -97,67 +97,67 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("appliance_buy_time");
 	}
 
-	public void setApplianceNum(java.lang.Integer applianceNum) {
+	public void setApplianceNum(Integer applianceNum) {
 		set("appliance_num", applianceNum);
 	}
 
-	public java.lang.Integer getApplianceNum() {
+	public Integer getApplianceNum() {
 		return get("appliance_num");
 	}
 
-	public void setApplianceMachineCode(java.lang.String applianceMachineCode) {
+	public void setApplianceMachineCode(String applianceMachineCode) {
 		set("appliance_machine_code", applianceMachineCode);
 	}
 
-	public java.lang.String getApplianceMachineCode() {
+	public String getApplianceMachineCode() {
 		return get("appliance_machine_code");
 	}
 
-	public void setCustomerName(java.lang.String customerName) {
+	public void setCustomerName(String customerName) {
 		set("customer_name", customerName);
 	}
 
-	public java.lang.String getCustomerName() {
+	public String getCustomerName() {
 		return get("customer_name");
 	}
 
-	public void setCustomerAddress(java.lang.String customerAddress) {
+	public void setCustomerAddress(String customerAddress) {
 		set("customer_address", customerAddress);
 	}
 
-	public java.lang.String getCustomerAddress() {
+	public String getCustomerAddress() {
 		return get("customer_address");
 	}
 
-	public void setCustomerMobile(java.lang.String customerMobile) {
+	public void setCustomerMobile(String customerMobile) {
 		set("customer_mobile", customerMobile);
 	}
 
-	public java.lang.String getCustomerMobile() {
+	public String getCustomerMobile() {
 		return get("customer_mobile");
 	}
 
-	public void setCustomerTelephone(java.lang.String customerTelephone) {
+	public void setCustomerTelephone(String customerTelephone) {
 		set("customer_telephone", customerTelephone);
 	}
 
-	public java.lang.String getCustomerTelephone() {
+	public String getCustomerTelephone() {
 		return get("customer_telephone");
 	}
 
-	public void setCustomerTelephone2(java.lang.String customerTelephone2) {
+	public void setCustomerTelephone2(String customerTelephone2) {
 		set("customer_telephone2", customerTelephone2);
 	}
 
-	public java.lang.String getCustomerTelephone2() {
+	public String getCustomerTelephone2() {
 		return get("customer_telephone2");
 	}
 
-	public void setCustomerLnglat(java.lang.String customerLnglat) {
+	public void setCustomerLnglat(String customerLnglat) {
 		set("customer_lnglat", customerLnglat);
 	}
 
-	public java.lang.String getCustomerLnglat() {
+	public String getCustomerLnglat() {
 		return get("customer_lnglat");
 	}
 
@@ -169,91 +169,91 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("promise_time");
 	}
 
-	public void setPromiseLimit(java.lang.String promiseLimit) {
+	public void setPromiseLimit(String promiseLimit) {
 		set("promise_limit", promiseLimit);
 	}
 
-	public java.lang.String getPromiseLimit() {
+	public String getPromiseLimit() {
 		return get("promise_limit");
 	}
 
-	public void setCustomerFeedback(java.lang.String customerFeedback) {
+	public void setCustomerFeedback(String customerFeedback) {
 		set("customer_feedback", customerFeedback);
 	}
 
-	public java.lang.String getCustomerFeedback() {
+	public String getCustomerFeedback() {
 		return get("customer_feedback");
 	}
 
-	public void setRemarks(java.lang.String remarks) {
+	public void setRemarks(String remarks) {
 		set("remarks", remarks);
 	}
 
-	public java.lang.String getRemarks() {
+	public String getRemarks() {
 		return get("remarks");
 	}
 
-	public void setOrigin(java.lang.String origin) {
+	public void setOrigin(String origin) {
 		set("origin", origin);
 	}
 
-	public java.lang.String getOrigin() {
+	public String getOrigin() {
 		return get("origin");
 	}
 
-	public void setServiceType(java.lang.String serviceType) {
+	public void setServiceType(String serviceType) {
 		set("service_type", serviceType);
 	}
 
-	public java.lang.String getServiceType() {
+	public String getServiceType() {
 		return get("service_type");
 	}
 
-	public void setLevel(java.lang.String level) {
+	public void setLevel(String level) {
 		set("level", level);
 	}
 
-	public java.lang.String getLevel() {
+	public String getLevel() {
 		return get("level");
 	}
 
-	public void setSiteName(java.lang.String siteName) {
+	public void setSiteName(String siteName) {
 		set("site_name", siteName);
 	}
 
-	public java.lang.String getSiteName() {
+	public String getSiteName() {
 		return get("site_name");
 	}
 
-	public void setEmployeId(java.lang.String employeId) {
+	public void setEmployeId(String employeId) {
 		set("employe_id", employeId);
 	}
 
-	public java.lang.String getEmployeId() {
+	public String getEmployeId() {
 		return get("employe_id");
 	}
 
-	public void setEmployeName(java.lang.String employeName) {
+	public void setEmployeName(String employeName) {
 		set("employe_name", employeName);
 	}
 
-	public java.lang.String getEmployeName() {
+	public String getEmployeName() {
 		return get("employe_name");
 	}
 
-	public void setMessengerId(java.lang.String messengerId) {
+	public void setMessengerId(String messengerId) {
 		set("messenger_id", messengerId);
 	}
 
-	public java.lang.String getMessengerId() {
+	public String getMessengerId() {
 		return get("messenger_id");
 	}
 
-	public void setMessengerName(java.lang.String messengerName) {
+	public void setMessengerName(String messengerName) {
 		set("messenger_name", messengerName);
 	}
 
-	public java.lang.String getMessengerName() {
+	public String getMessengerName() {
 		return get("messenger_name");
 	}
 
@@ -265,91 +265,91 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("update_time");
 	}
 
-	public void setUpdateName(java.lang.String updateName) {
+	public void setUpdateName(String updateName) {
 		set("update_name", updateName);
 	}
 
-	public java.lang.String getUpdateName() {
+	public String getUpdateName() {
 		return get("update_name");
 	}
 
-	public void setWarrantyType(java.lang.String warrantyType) {
+	public void setWarrantyType(String warrantyType) {
 		set("warranty_type", warrantyType);
 	}
 
-	public java.lang.String getWarrantyType() {
+	public String getWarrantyType() {
 		return get("warranty_type");
 	}
 
-	public void setServiceMode(java.lang.String serviceMode) {
+	public void setServiceMode(String serviceMode) {
 		set("service_mode", serviceMode);
 	}
 
-	public java.lang.String getServiceMode() {
+	public String getServiceMode() {
 		return get("service_mode");
 	}
 
-	public void setMalfunctionType(java.lang.String malfunctionType) {
+	public void setMalfunctionType(String malfunctionType) {
 		set("malfunction_type", malfunctionType);
 	}
 
-	public java.lang.String getMalfunctionType() {
+	public String getMalfunctionType() {
 		return get("malfunction_type");
 	}
 
-	public void setMalfunctionDescription(java.lang.String malfunctionDescription) {
+	public void setMalfunctionDescription(String malfunctionDescription) {
 		set("malfunction_description", malfunctionDescription);
 	}
 
-	public java.lang.String getMalfunctionDescription() {
+	public String getMalfunctionDescription() {
 		return get("malfunction_description");
 	}
 
-	public void setMalfunctionCause(java.lang.String malfunctionCause) {
+	public void setMalfunctionCause(String malfunctionCause) {
 		set("malfunction_cause", malfunctionCause);
 	}
 
-	public java.lang.String getMalfunctionCause() {
+	public String getMalfunctionCause() {
 		return get("malfunction_cause");
 	}
 
-	public void setMalfunctionCauseDescription(java.lang.String malfunctionCauseDescription) {
+	public void setMalfunctionCauseDescription(String malfunctionCauseDescription) {
 		set("malfunction_cause_description", malfunctionCauseDescription);
 	}
 
-	public java.lang.String getMalfunctionCauseDescription() {
+	public String getMalfunctionCauseDescription() {
 		return get("malfunction_cause_description");
 	}
 
-	public void setMeasures(java.lang.String measures) {
+	public void setMeasures(String measures) {
 		set("measures", measures);
 	}
 
-	public java.lang.String getMeasures() {
+	public String getMeasures() {
 		return get("measures");
 	}
 
-	public void setMeasuresDescription(java.lang.String measuresDescription) {
+	public void setMeasuresDescription(String measuresDescription) {
 		set("measures_description", measuresDescription);
 	}
 
-	public java.lang.String getMeasuresDescription() {
+	public String getMeasuresDescription() {
 		return get("measures_description");
 	}
 
-	public void setSiteId(java.lang.String siteId) {
+	public void setSiteId(String siteId) {
 		set("site_id", siteId);
 	}
 
-	public java.lang.String getSiteId() {
+	public String getSiteId() {
 		return get("site_id");
 	}
 
-	public void setLatestProcess(java.lang.String latestProcess) {
+	public void setLatestProcess(String latestProcess) {
 		set("latest_process", latestProcess);
 	}
 
-	public java.lang.String getLatestProcess() {
+	public String getLatestProcess() {
 		return get("latest_process");
 	}
 
@@ -361,11 +361,11 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("latest_process_time");
 	}
 
-	public void setProcessDetail(java.lang.String processDetail) {
+	public void setProcessDetail(String processDetail) {
 		set("process_detail", processDetail);
 	}
 
-	public java.lang.String getProcessDetail() {
+	public String getProcessDetail() {
 		return get("process_detail");
 	}
 
@@ -377,51 +377,51 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("end_time");
 	}
 
-	public void setStatus(java.lang.String status) {
+	public void setStatus(String status) {
 		set("status", status);
 	}
 
-	public java.lang.String getStatus() {
+	public String getStatus() {
 		return get("status");
 	}
 
-	public void setCanoper(java.lang.String canoper) {
+	public void setCanoper(String canoper) {
 		set("canoper", canoper);
 	}
 
-	public java.lang.String getCanoper() {
+	public String getCanoper() {
 		return get("canoper");
 	}
 
-	public void setDropinCount(java.lang.Integer dropinCount) {
+	public void setDropinCount(Integer dropinCount) {
 		set("dropin_count", dropinCount);
 	}
 
-	public java.lang.Integer getDropinCount() {
+	public Integer getDropinCount() {
 		return get("dropin_count");
 	}
 
-	public void setRejectCount(java.lang.Integer rejectCount) {
+	public void setRejectCount(Integer rejectCount) {
 		set("reject_count", rejectCount);
 	}
 
-	public java.lang.Integer getRejectCount() {
+	public Integer getRejectCount() {
 		return get("reject_count");
 	}
 
-	public void setTelCount(java.lang.Integer telCount) {
+	public void setTelCount(Integer telCount) {
 		set("tel_count", telCount);
 	}
 
-	public java.lang.Integer getTelCount() {
+	public Integer getTelCount() {
 		return get("tel_count");
 	}
 
-	public void setReturnCard(java.lang.String returnCard) {
+	public void setReturnCard(String returnCard) {
 		set("return_card", returnCard);
 	}
 
-	public java.lang.String getReturnCard() {
+	public String getReturnCard() {
 		return get("return_card");
 	}
 
@@ -433,19 +433,19 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("return_card_time");
 	}
 
-	public void setWhetherCollection(java.lang.String whetherCollection) {
+	public void setWhetherCollection(String whetherCollection) {
 		set("whether_collection", whetherCollection);
 	}
 
-	public java.lang.String getWhetherCollection() {
+	public String getWhetherCollection() {
 		return get("whether_collection");
 	}
 
-	public void setFittingFlag(java.lang.String fittingFlag) {
+	public void setFittingFlag(String fittingFlag) {
 		set("fitting_flag", fittingFlag);
 	}
 
-	public java.lang.String getFittingFlag() {
+	public String getFittingFlag() {
 		return get("fitting_flag");
 	}
 
@@ -481,11 +481,11 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("confirm_cost");
 	}
 
-	public void setCallbackResult(java.lang.String callbackResult) {
+	public void setCallbackResult(String callbackResult) {
 		set("callback_result", callbackResult);
 	}
 
-	public java.lang.String getCallbackResult() {
+	public String getCallbackResult() {
 		return get("callback_result");
 	}
 
@@ -497,19 +497,19 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("callback_time");
 	}
 
-	public void setReview(java.lang.String review) {
+	public void setReview(String review) {
 		set("review", review);
 	}
 
-	public java.lang.String getReview() {
+	public String getReview() {
 		return get("review");
 	}
 
-	public void setReviewRemark(java.lang.String reviewRemark) {
+	public void setReviewRemark(String reviewRemark) {
 		set("review_remark", reviewRemark);
 	}
 
-	public java.lang.String getReviewRemark() {
+	public String getReviewRemark() {
 		return get("review_remark");
 	}
 
@@ -521,19 +521,19 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("review_time");
 	}
 
-	public void setFlag(java.lang.String flag) {
+	public void setFlag(String flag) {
 		set("flag", flag);
 	}
 
-	public java.lang.String getFlag() {
+	public String getFlag() {
 		return get("flag");
 	}
 
-	public void setFlagDesc(java.lang.String flagDesc) {
+	public void setFlagDesc(String flagDesc) {
 		set("flag_desc", flagDesc);
 	}
 
-	public java.lang.String getFlagDesc() {
+	public String getFlagDesc() {
 		return get("flag_desc");
 	}
 
@@ -545,19 +545,19 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("flag_alert_date");
 	}
 
-	public void setRecordAccount(java.lang.String recordAccount) {
+	public void setRecordAccount(String recordAccount) {
 		set("record_account", recordAccount);
 	}
 
-	public java.lang.String getRecordAccount() {
+	public String getRecordAccount() {
 		return get("record_account");
 	}
 
-	public void setBdImgs(java.lang.String bdImgs) {
+	public void setBdImgs(String bdImgs) {
 		set("bd_imgs", bdImgs);
 	}
 
-	public java.lang.String getBdImgs() {
+	public String getBdImgs() {
 		return get("bd_imgs");
 	}
 
@@ -569,75 +569,75 @@ public abstract class BaseCrmOrder<M extends BaseCrmOrder<M>> extends Model<M> i
 		return get("record_account_time");
 	}
 
-	public void setCustomerSign(java.lang.String customerSign) {
+	public void setCustomerSign(String customerSign) {
 		set("customer_sign", customerSign);
 	}
 
-	public java.lang.String getCustomerSign() {
+	public String getCustomerSign() {
 		return get("customer_sign");
 	}
 
-	public void setFactoryNumber(java.lang.String factoryNumber) {
+	public void setFactoryNumber(String factoryNumber) {
 		set("factory_number", factoryNumber);
 	}
 
-	public java.lang.String getFactoryNumber() {
+	public String getFactoryNumber() {
 		return get("factory_number");
 	}
 
-	public void setPleaseReferMall(java.lang.String pleaseReferMall) {
+	public void setPleaseReferMall(String pleaseReferMall) {
 		set("please_refer_mall", pleaseReferMall);
 	}
 
-	public java.lang.String getPleaseReferMall() {
+	public String getPleaseReferMall() {
 		return get("please_refer_mall");
 	}
 
-	public void setParentDipatchFlag(java.lang.String parentDipatchFlag) {
+	public void setParentDipatchFlag(String parentDipatchFlag) {
 		set("parent_dipatch_flag", parentDipatchFlag);
 	}
 
-	public java.lang.String getParentDipatchFlag() {
+	public String getParentDipatchFlag() {
 		return get("parent_dipatch_flag");
 	}
 
-	public void setParentSiteId(java.lang.String parentSiteId) {
+	public void setParentSiteId(String parentSiteId) {
 		set("parent_site_id", parentSiteId);
 	}
 
-	public java.lang.String getParentSiteId() {
+	public String getParentSiteId() {
 		return get("parent_site_id");
 	}
 
-	public void setParentStatus(java.lang.String parentStatus) {
+	public void setParentStatus(String parentStatus) {
 		set("parent_status", parentStatus);
 	}
 
-	public java.lang.String getParentStatus() {
+	public String getParentStatus() {
 		return get("parent_status");
 	}
 
-	public void setSeq(java.lang.Integer seq) {
+	public void setSeq(Integer seq) {
 		set("seq", seq);
 	}
 
-	public java.lang.Integer getSeq() {
+	public Integer getSeq() {
 		return get("seq");
 	}
 
-	public void setOrderNo400(java.lang.String orderNo400) {
+	public void setOrderNo400(String orderNo400) {
 		set("order_no_400", orderNo400);
 	}
 
-	public java.lang.String getOrderNo400() {
+	public String getOrderNo400() {
 		return get("order_no_400");
 	}
 
-	public void setPrintTimes(java.lang.Integer printTimes) {
+	public void setPrintTimes(Integer printTimes) {
 		set("print_times", printTimes);
 	}
 
-	public java.lang.Integer getPrintTimes() {
+	public Integer getPrintTimes() {
 		return get("print_times");
 	}
 

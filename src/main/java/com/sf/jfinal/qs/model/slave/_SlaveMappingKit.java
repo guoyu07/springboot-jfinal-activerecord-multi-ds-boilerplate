@@ -1,4 +1,4 @@
-package com.sf.jfinal.qs.model.master;
+package com.sf.jfinal.qs.model.slave;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
@@ -13,10 +13,10 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
  * }
  * </pre>
  */
-public class _MappingKit {
+public class _SlaveMappingKit {
 
 	public static void mapping(ActiveRecordPlugin arp) {
-		arp.addMapping("crm_order", "id", CrmOrder.class);
+		arp.addMapping("person", "id", Person.class);
 	}
 }
 
