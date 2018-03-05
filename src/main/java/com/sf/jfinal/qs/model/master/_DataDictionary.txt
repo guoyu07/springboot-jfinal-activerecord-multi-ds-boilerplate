@@ -1,0 +1,85 @@
+Table: crm_order
+-------------------------------+---------------+------+-----+---------+---------
+ Field                         | Type          | Null | Key | Default | Remarks 
+-------------------------------+---------------+------+-----+---------+---------
+ id                            | CHAR(32)      | NO   | PRI |         | 主键      
+ number                        | CHAR(20)      | NO   |     |         | 工单编号，生成规则：yyyyMMddHHmmssSSS
+ order_type                    | CHAR(1)       | YES  |     | 1       | 工单来源类型：1.ERP系统录入 2.美的厂家系统 3.惠而浦厂家系统 4.海信厂家系统 5.海尔厂家系统。6.一级网点派工。默认1
+ create_time                   | DATETIME(19)  | YES  |     |         | 工单创建时间  
+ repair_time                   | DATETIME(19)  | YES  |     |         | 工单报修时间  
+ create_by                     | CHAR(32)      | YES  |     |         | 工单创建人user_id
+ appliance_brand               | VARCHAR(20)   | YES  |     |         | 家电品牌    
+ appliance_category            | VARCHAR(100)  | YES  |     |         | 家电品类    
+ appliance_model               | VARCHAR(100)  | YES  |     |         | 家电型号    
+ appliance_barcode             | VARCHAR(100)  | YES  |     |         | 家电内机条码  
+ appliance_buy_time            | DATE(10)      | YES  |     |         | 家电购机日期  
+ appliance_num                 | INT(10)       | YES  |     | 1       | 家电数量    
+ appliance_machine_code        | VARCHAR(100)  | YES  |     |         | 家电外机条码  
+ customer_name                 | VARCHAR(50)   | YES  |     |         | 用户姓名    
+ customer_address              | VARCHAR(255)  | YES  |     |         | 用户详细地址  
+ customer_mobile               | VARCHAR(20)   | YES  |     |         | 用户联系方式一 
+ customer_telephone            | VARCHAR(100)  | YES  |     |         | 用户联系方式二 
+ customer_telephone2           | VARCHAR(100)  | YES  |     |         | 用户联系方式三 
+ customer_lnglat               | VARCHAR(100)  | YES  |     |         | 用户的坐标信息：（格式：纬度，经度）
+ promise_time                  | DATE(10)      | YES  |     |         | 预约时间    
+ promise_limit                 | VARCHAR(500)  | YES  |     |         | 时间要求，格式：xx:xx之前，xx:xx之后，xx:xx与xx:xx之间。例如：09:30之前
+ customer_feedback             | VARCHAR(1000) | YES  |     |         | 服务描述    
+ remarks                       | TEXT(65535)   | YES  |     |         | 备注      
+ origin                        | VARCHAR(20)   | YES  |     |         | 信息来源（以文字存储）  厂家/用户/其他网点/微信/经销商/三洋厂家
+ service_type                  | VARCHAR(20)   | YES  |     |         | 服务类型（存服务类型名称）,根据服务类型列表进行选择操作,对应之前repair_type字段
+ level                         | CHAR(1)       | YES  |     | 2       | 信息等级：1.紧急 2.一般
+ site_name                     | VARCHAR(50)   | YES  |     |         | 服务商名称   
+ employe_id                    | VARCHAR(255)  | YES  |     |         | 工程师id   
+ employe_name                  | VARCHAR(255)  | YES  |     |         | 工程师姓名   
+ messenger_id                  | CHAR(32)      | YES  |     |         | 信息员id   
+ messenger_name                | VARCHAR(50)   | YES  |     |         | 信息员姓名   
+ update_time                   | DATETIME(19)  | YES  |     |         | 工单更新时间，对工单的每次操作都对该值进行更新
+ update_name                   | VARCHAR(100)  | YES  |     |         | 更新人姓名   
+ warranty_type                 | CHAR(1)       | YES  |     |         | 保修类型,对应之前service_type字段：1.保内 2.保外
+ service_mode                  | VARCHAR(20)   | YES  |     |         | 服务方式：1.上门 2.拉修
+ malfunction_type              | VARCHAR(255)  | YES  |     |         | 故障现象，可在工程师APP端/web端输入修改
+ malfunction_description       | VARCHAR(500)  | YES  |     |         | 故障现象描述，可在工程师APP端/web端输入修改
+ malfunction_cause             | VARCHAR(100)  | YES  |     |         | 故障原因，可在工程师APP端/web端输入修改
+ malfunction_cause_description | VARCHAR(500)  | YES  |     |         | 故障原因描述，可在工程师APP端/web端输入修改
+ measures                      | VARCHAR(100)  | YES  |     |         | 服务措施，可在工程师APP端/web端输入修改
+ measures_description          | VARCHAR(500)  | YES  |     |         | 服务措施描述，可在工程师APP端/web端输入修改
+ site_id                       | CHAR(32)      | YES  |     |         | 服务商id   
+ latest_process                | VARCHAR(100)  | YES  |     |         | 最新过程：如 修改预约时间、上门维修、缺件等
+ latest_process_time           | DATETIME(19)  | YES  |     |         | 最新过程时间  
+ process_detail                | TEXT(65535)   | YES  |     |         | 过程信息详情，格式：2017-04-05 15:16:50#@工单接入@#@2017-04-05 16:16:50#@工单进行派工
+ end_time                      | DATETIME(19)  | YES  |     |         | 最新派工的工程师服务完工时间
+ status                        | CHAR(1)       | YES  |     | 1       | 工单状态：0.待网点接收 1.待派工 2.服务中 3.待回访待结算 4.已回访待结算 5.已完成 6.取消工单 7.暂不派工 8.无效工单 9.尚未指派二级网点，默认1
+ canoper                       | VARCHAR(2)    | YES  |     | 1       | MAINSERVER更新标记：0可更新 1不可更新
+ dropin_count                  | INT(10)       | YES  |     | 0       | 上门次数    
+ reject_count                  | INT(10)       | YES  |     | 0       | 拒单次数    
+ tel_count                     | INT(10)       | YES  |     | 0       | 来电次数    
+ return_card                   | CHAR(1)       | YES  |     | 0       | 交回卡单：0.否，1.是
+ return_card_time              | DATETIME(19)  | YES  |     |         | 交回卡单时间  
+ whether_collection            | CHAR(1)       | YES  |     | 0       | 确认是否交款：0,否、1,是
+ fitting_flag                  | CHAR(1)       | YES  |     | 0       | 配件标记，0未申请 1待审核 2缺件中 3待领取 4已领取
+ serve_cost                    | DECIMAL(10,2) | YES  |     | 0.00    | 工程师输入的服务费
+ auxiliary_cost                | DECIMAL(10,2) | YES  |     | 0.00    | 工程师输入的配件费
+ warranty_cost                 | DECIMAL(10,2) | YES  |     | 0.00    | 工程师输入的延保费
+ confirm_cost                  | DECIMAL(10,2) | YES  |     | 0.00    | 信息员确认的总费用
+ callback_result               | VARCHAR(100)  | YES  |     |         | 回访结果：列表写死 1.已完工 2.仍需上门
+ callback_time                 | DATETIME(19)  | YES  |     |         | 回访时间    
+ review                        | CHAR(1)       | YES  |     | 0       | 审核标记 null或者0代表未审核  1代表审核通过  2代表审核未通过
+ review_remark                 | TEXT(65535)   | YES  |     |         | 审核备注    
+ review_time                   | DATETIME(19)  | YES  |     |         | 审核时间    
+ flag                          | CHAR(32)      | YES  |     |         | 标记类型id  
+ flag_desc                     | VARCHAR(40)   | YES  |     |         | 标记描述    
+ flag_alert_date               | DATE(10)      | YES  |     |         | 标记提醒日期  
+ record_account                | CHAR(1)       | YES  |     | 0       | 录单确认：0未确认 1已确认
+ bd_imgs                       | VARCHAR(500)  | YES  |     |         | 微信报单时提交的图片
+ record_account_time           | DATETIME(19)  | YES  |     |         | 录单操作时间  
+ customer_sign                 | VARCHAR(255)  | YES  |     |         | 用户签字图片地址
+ factory_number                | VARCHAR(32)   | YES  |     |         | 录单操作时添加的厂家工单编号
+ please_refer_mall             | VARCHAR(50)   | YES  |     |         | 购机商场    
+ parent_dipatch_flag           | CHAR(1)       | YES  |     | 0       | 一级网点派工标记：0.否，1.一级网点派工，2.一级网点转派
+ parent_site_id                | CHAR(32)      | YES  |     |         | 一级网点id  
+ parent_status                 | CHAR(2)       | YES  |     | 1       | 一级网点工单状态：1.待派工 2.待二级网点接收 3.服务中 4 服务完成待回访 5已回访 6.已退回 7.暂不派工 8.已取消
+ seq                           | INT(10)       | YES  |     | 0       | 序号      
+ order_no_400                  | CHAR(20)      | YES  |     |         | 400转自接过来的工单编号
+ print_times                   | INT(10)       | YES  |     | 0       | 工单打印次数  
+-------------------------------+---------------+------+-----+---------+---------
+
