@@ -1,5 +1,6 @@
 package com.gaols.study.studyboot.db.config;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.sf.jfinal.qs.model.master._MasterMappingKit;
@@ -7,6 +8,7 @@ import com.sf.jfinal.qs.model.slave._SlaveMappingKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,15 +30,17 @@ public class MultiDSConfigurer {
     private MasterDruidConfig masterDruidConfig;
     private SlaveDruidConfig slaveDruidConfig;
 
-    @Primary
     @Bean("master")
+    @Primary
+    @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     public DataSource master() {
-        return createDruidPlugin(masterDruidConfig).getDataSource();
+        return DruidDataSourceBuilder.create().build();
     }
 
     @Bean("slave")
+    @ConfigurationProperties(prefix = "spring.datasource.druid.slave")
     public DataSource slave() {
-        return createDruidPlugin(slaveDruidConfig).getDataSource();
+        return DruidDataSourceBuilder.create().build();
     }
 
     private DruidPlugin createDruidPlugin(DruidConfig config) {
