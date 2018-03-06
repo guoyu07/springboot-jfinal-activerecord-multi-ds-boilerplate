@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -23,7 +24,6 @@ public class MultiDSConfigurer {
     private static final Logger logger = LoggerFactory.getLogger(MultiDSConfigurer.class);
 
     @Bean("master")
-    @Primary
     @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     public DataSource master() {
         return DruidDataSourceBuilder.create().build();
@@ -51,7 +51,9 @@ public class MultiDSConfigurer {
         return plugin;
     }
 
+    @Primary
     @Bean("dynamicDataSource")
+    @DependsOn({"master", "slave"})
     public DataSource dynamicDataSource() {
         DynamicRoutingDataSource dynamicRoutingDataSource = new DynamicRoutingDataSource();
         Map<Object, Object> dataSourceMap = new HashMap<>();
