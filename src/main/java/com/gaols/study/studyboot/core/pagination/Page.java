@@ -1,6 +1,5 @@
 package com.gaols.study.studyboot.core.pagination;
 
-import com.gaols.study.studyboot.web.HelloController;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +15,7 @@ public class Page<T> {
     private int pageSize;
     private int totalRow;
 
-    private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
+    private static final Logger logger = LoggerFactory.getLogger(Page.class);
     public static final String DEFAULT_PAGE_SIZE = "10";
 
     /**
